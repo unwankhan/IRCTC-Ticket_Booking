@@ -1,0 +1,905 @@
+[
+  {
+    "name" : "Unwan Khan" ,
+    "password" : "Unwan123" ,
+    "email" : "unwanazmi@gmail.com" ,
+    "hashedPassword" : "$2a$10$/B1MMZXxIFJ7DoN4dJjGKe0yKiJU.ZmMS5hO.LnU/DKYxhrhS6.3S" ,
+    "ticketsBooked" : [
+      {
+        "ticketId" : "T001" ,
+        "userId" : "unwan_azmi" ,
+        "source" : "Azamgarh" ,
+        "destination" : "Delhi" ,
+        "dateOfTravel" : "2023-12-08T18:30:00Z" ,
+        "train" : {
+          "trainId" : "AZM-32DEL" ,
+          "trainNo" : "54114" ,
+          "seats" : [
+            [
+              1 ,
+              0 ,
+              0 ,
+              0 ,
+              0 ,
+              0
+            ] ,
+            [
+              0 ,
+              0 ,
+              0 ,
+              0 ,
+              0 ,
+              0
+            ] ,
+            [
+              0 ,
+              0 ,
+              0 ,
+              0 ,
+              0 ,
+              0
+            ] ,
+            [
+              0 ,
+              0 ,
+              0 ,
+              0 ,
+              0 ,
+              0
+            ]
+          ] ,
+          "stationTimes" : {
+            "Azamgarh" : "2023-12-08T18:30:00Z" ,
+            "Shahganj" : "2023-12-08T21:50:00Z" ,
+            "Lucknow" : "2023-12-08T23:50:00Z" ,
+            "Delhi" : "2023-12-09T07:50:00Z"
+          } ,
+          "stations" : {
+            "Azamgarh" : 0 ,
+            "Phoolpur" : 1 ,
+            "Shahganj" : 2 ,
+            "Akbarpur" : 3 ,
+            "Ayodhya" : 4 ,
+            "Barabanki" : 5 ,
+            "Lucknow" : 6 ,
+            "Kanpur" : 7 ,
+            "Delhi" : 8
+          }
+        } ,
+        "seat" : "00"
+      }
+    ] ,
+    "userId" : "unwan_azmi"
+  } ,
+  {
+    "name" : "Ahsan Khan" ,
+    "password" : "1234Ahsan" ,
+    "email" : "ahsan@gmail.com" ,
+    "hashedPassword" : "$2a$10$7EKQR1PO8p8HVe1YFzfHje61UUcflKYCFWFq4VU6jANpelQIIIXHu" ,
+    "ticketsBooked" : [
+      {
+        "ticketId" : "T002" ,
+        "userId" : "ahsan_786" ,
+        "source" : "Lucknow" ,
+        "destination" : "Hyderabad" ,
+        "dateOfTravel" : "2024-01-12T10:00:00Z" ,
+        "train" : {
+          "trainId" : "LKO-991HYD" ,
+          "trainNo" : "22991" ,
+          "seats" : [
+            [
+              0 ,
+              1 ,
+              1 ,
+              0 ,
+              1 ,
+              0
+            ] ,
+            [
+              0 ,
+              0 ,
+              1 ,
+              1 ,
+              0 ,
+              0
+            ] ,
+            [
+              1 ,
+              1 ,
+              0 ,
+              0 ,
+              0 ,
+              1
+            ] ,
+            [
+              0 ,
+              0 ,
+              1 ,
+              1 ,
+              0 ,
+              1
+            ]
+          ] ,
+          "stationTimes" : {
+            "Lucknow" : "2024-01-12T10:00:00Z" ,
+            "Jabalpur" : "2024-01-12T19:00:00Z" ,
+            "Nagpur" : "2024-01-12T23:00:00Z" ,
+            "Hyderabad" : "2024-01-13T07:00:00Z"
+          } ,
+          "stations" : {
+            "Lucknow" : 0 ,
+            "Raebareli" : 1 ,
+            "Prayagraj" : 2 ,
+            "Satna" : 3 ,
+            "Jabalpur" : 4 ,
+            "Nagpur" : 5 ,
+            "Hyderabad" : 6
+          }
+        } ,
+        "seat" : "25"
+      }
+    ] ,
+    "userId" : "7de176f1-bceb-4229-b138-b09eb74e2024"
+  } ,
+  {
+    "name" : "Zoya Ansari" ,
+    "password" : "Zoya@123" ,
+    "email" : "zoya@gmail.com" ,
+    "hashedPassword" : "$2a$10$ADfs1pQ3uHf7OD.zQGJFVOa72Eopqn5PAkaoOv2xt/9f3bzZjG7su" ,
+    "ticketsBooked" : [
+      {
+        "ticketId" : "T003" ,
+        "userId" : "zoya_999" ,
+        "source" : "Mumbai" ,
+        "destination" : "GKP" ,
+        "dateOfTravel" : "2024-02-05T07:50:00Z" ,
+        "train" : {
+          "trainId" : "MUM-123GKP" ,
+          "trainNo" : "12356" ,
+          "seats" : [
+            [
+              1 ,
+              1 ,
+              1 ,
+              0 ,
+              1 ,
+              1
+            ] ,
+            [
+              0 ,
+              1 ,
+              0 ,
+              0 ,
+              1 ,
+              0
+            ] ,
+            [
+              1 ,
+              1 ,
+              0 ,
+              1 ,
+              1 ,
+              0
+            ] ,
+            [
+              0 ,
+              0 ,
+              1 ,
+              0 ,
+              0 ,
+              0
+            ]
+          ] ,
+          "stationTimes" : {
+            "Mumbai" : "2024-02-05T07:50:00Z" ,
+            "Vadodara" : "2024-02-05T12:30:00Z" ,
+            "Jhansi" : "2024-02-05T22:30:00Z" ,
+            "GKP" : "2024-02-06T06:00:00Z"
+          } ,
+          "stations" : {
+            "Mumbai" : 0 ,
+            "Surat" : 1 ,
+            "Vadodara" : 2 ,
+            "Ahmedabad" : 3 ,
+            "Ratlam" : 4 ,
+            "Jhansi" : 5 ,
+            "GKP" : 6
+          }
+        } ,
+        "seat" : "21"
+      }
+    ] ,
+    "userId" : "zoya_999"
+  } ,
+  {
+    "name" : "Mizan Khan" ,
+    "password" : "1234Mizan" ,
+    "email" : "mizan@gmail.com" ,
+    "hashedPassword" : "$2a$10$l0niGgMNyr3eKAY51smGJOOfKBDWPw3LI/k1iXVGXfgnVj02Vrnjm" ,
+    "ticketsBooked" : [
+      {
+        "ticketId" : "dcd3a8e8-561b-4785-a103-7705ebbeee85" ,
+        "userId" : "6587f316-8ced-499d-bd61-8a639b2837ac" ,
+        "source" : "Azamgarh" ,
+        "destination" : "Lucknow" ,
+        "dateOfTravel" : "2025-12-25" ,
+        "train" : {
+          "trainId" : "AZM-32DEL" ,
+          "trainNo" : "54114" ,
+          "seats" : [
+            [
+              1 ,
+              1 ,
+              0 ,
+              0 ,
+              0 ,
+              0
+            ] ,
+            [
+              1 ,
+              1 ,
+              0 ,
+              0 ,
+              0 ,
+              0
+            ] ,
+            [
+              1 ,
+              1 ,
+              0 ,
+              0 ,
+              0 ,
+              0
+            ] ,
+            [
+              1 ,
+              1 ,
+              0 ,
+              0 ,
+              0 ,
+              0
+            ]
+          ] ,
+          "stationTimes" : {
+            "Azamgarh" : "2023-12-08T18:30:00Z" ,
+            "Shahganj" : "2023-12-08T21:50:00Z" ,
+            "Lucknow" : "2023-12-08T23:50:00Z" ,
+            "Delhi" : "2023-12-09T07:50:00Z"
+          } ,
+          "stations" : {
+            "Azamgarh" : 0 ,
+            "Phoolpur" : 1 ,
+            "Shahganj" : 2 ,
+            "Akbarpur" : 3 ,
+            "Ayodhya" : 4 ,
+            "Barabanki" : 5 ,
+            "Lucknow" : 6 ,
+            "Kanpur" : 7 ,
+            "Delhi" : 8
+          }
+        } ,
+        "seat" : "01112131"
+      } ,
+      {
+        "ticketId" : "55e6bb98-fdf0-4bb9-99f1-da48629f26e3" ,
+        "userId" : "6587f316-8ced-499d-bd61-8a639b2837ac" ,
+        "source" : "Phoolpur" ,
+        "destination" : "Barabanki" ,
+        "dateOfTravel" : "2025-12-25" ,
+        "train" : {
+          "trainId" : "AZM-32DEL" ,
+          "trainNo" : "54114" ,
+          "seats" : [
+            [
+              1 ,
+              1 ,
+              1 ,
+              0 ,
+              0 ,
+              0
+            ] ,
+            [
+              1 ,
+              1 ,
+              0 ,
+              0 ,
+              0 ,
+              0
+            ] ,
+            [
+              1 ,
+              1 ,
+              0 ,
+              0 ,
+              0 ,
+              0
+            ] ,
+            [
+              1 ,
+              1 ,
+              0 ,
+              0 ,
+              0 ,
+              0
+            ]
+          ] ,
+          "stationTimes" : {
+            "Azamgarh" : "2023-12-08T18:30:00Z" ,
+            "Shahganj" : "2023-12-08T21:50:00Z" ,
+            "Lucknow" : "2023-12-08T23:50:00Z" ,
+            "Delhi" : "2023-12-09T07:50:00Z"
+          } ,
+          "stations" : {
+            "Azamgarh" : 0 ,
+            "Phoolpur" : 1 ,
+            "Shahganj" : 2 ,
+            "Akbarpur" : 3 ,
+            "Ayodhya" : 4 ,
+            "Barabanki" : 5 ,
+            "Lucknow" : 6 ,
+            "Kanpur" : 7 ,
+            "Delhi" : 8
+          }
+        } ,
+        "seat" : "02"
+      }
+    ] ,
+    "userId" : "6587f316-8ced-499d-bd61-8a639b2837ac"
+  } ,
+  {
+    "name" : "Shahzad Ahmad" ,
+    "password" : "1234Shahzad" ,
+    "email" : "shahzad@gmail.com" ,
+    "hashedPassword" : "$2a$10$la8fzOttp5readQxqAIar.8EWdoskRtK8UsicyiYt3uFL/uKDLCbq" ,
+    "ticketsBooked" : [ ] ,
+    "userId" : "SHAHZAD128"
+  } ,
+  {
+    "name" : "Ammar Khan" ,
+    "password" : "Ammar1234" ,
+    "email" : "ammar@gmail.com" ,
+    "hashedPassword" : "$2a$10$jk6v524UVk41.6k8stZ0nOEkRVdGTHsV7An.y2mw.NrbaIR2m036y" ,
+    "ticketsBooked" : [
+      {
+        "ticketId" : "2538682c-3184-459c-8bbe-e3fad54f4d94" ,
+        "userId" : "AMMAR523" ,
+        "source" : "Lucknow" ,
+        "destination" : "Prayagraj" ,
+        "dateOfTravel" : "2025-12-25" ,
+        "train" : {
+          "trainId" : "MUM-123GKP" ,
+          "trainNo" : "12356" ,
+          "seats" : [
+            [
+              1 ,
+              1 ,
+              0 ,
+              1 ,
+              0 ,
+              1
+            ] ,
+            [
+              0 ,
+              0 ,
+              1 ,
+              0 ,
+              0 ,
+              1
+            ] ,
+            [
+              1 ,
+              1 ,
+              0 ,
+              0 ,
+              1 ,
+              0
+            ] ,
+            [
+              0 ,
+              0 ,
+              0 ,
+              1 ,
+              0 ,
+              0
+            ]
+          ] ,
+          "stationTimes" : {
+            "Mumbai" : "2023-12-15T07:50:00Z" ,
+            "Surat" : "2023-12-15T10:00:00Z" ,
+            "Vadodara" : "2023-12-15T12:30:00Z" ,
+            "GKP" : "2023-12-16T06:00:00Z"
+          } ,
+          "stations" : {
+            "Lucknow" : 0 ,
+            "Prayagraj" : 1 ,
+            "Mumbai" : 2 ,
+            "Surat" : 3 ,
+            "Vadodara" : 4 ,
+            "Ahmedabad" : 5 ,
+            "Ratlam" : 6 ,
+            "Jhansi" : 7 ,
+            "GKP" : 8
+          }
+        } ,
+        "seat" : "00"
+      } ,
+      {
+        "ticketId" : "c782d4a0-4" ,
+        "userId" : "AMMAR523" ,
+        "source" : "Azamgarh" ,
+        "destination" : "Lucknow" ,
+        "dateOfTravel" : "2025-11-10" ,
+        "train" : {
+          "trainId" : "AZM-32DEL" ,
+          "trainNo" : "54114" ,
+          "seats" : [
+            [
+              1 ,
+              1 ,
+              1 ,
+              1 ,
+              0 ,
+              0
+            ] ,
+            [
+              1 ,
+              1 ,
+              0 ,
+              0 ,
+              0 ,
+              0
+            ] ,
+            [
+              1 ,
+              1 ,
+              0 ,
+              0 ,
+              0 ,
+              0
+            ] ,
+            [
+              1 ,
+              1 ,
+              0 ,
+              0 ,
+              0 ,
+              0
+            ]
+          ] ,
+          "stationTimes" : {
+            "Azamgarh" : "2023-12-08T18:30:00Z" ,
+            "Shahganj" : "2023-12-08T21:50:00Z" ,
+            "Lucknow" : "2023-12-08T23:50:00Z" ,
+            "Delhi" : "2023-12-09T07:50:00Z"
+          } ,
+          "stations" : {
+            "Azamgarh" : 0 ,
+            "Phoolpur" : 1 ,
+            "Shahganj" : 2 ,
+            "Akbarpur" : 3 ,
+            "Ayodhya" : 4 ,
+            "Barabanki" : 5 ,
+            "Lucknow" : 6 ,
+            "Kanpur" : 7 ,
+            "Delhi" : 8
+          }
+        } ,
+        "seat" : "03"
+      }
+    ] ,
+    "userId" : "AMMAR523"
+  } ,
+  {
+    "name" : "Saif Ansari" ,
+    "password" : "1234Saif" ,
+    "email" : "saif@gmail.com" ,
+    "hashedPassword" : "$2a$10$uEV8skuPkUMOygf7RQoY.Oogf4BNmQ4QJTFqGUkNR.PX2wLTF7k4." ,
+    "ticketsBooked" : [
+      {
+        "ticketId" : "5b896ef8-1" ,
+        "userId" : "SAIF43" ,
+        "source" : "Azamgarh" ,
+        "destination" : "Lucknow" ,
+        "dateOfTravel" : "2025-11-22" ,
+        "train" : {
+          "trainId" : "AZM-32DEL" ,
+          "trainNo" : "54114" ,
+          "seats" : [
+            [
+              1 ,
+              1 ,
+              1 ,
+              1 ,
+              1 ,
+              0
+            ] ,
+            [
+              1 ,
+              1 ,
+              0 ,
+              0 ,
+              0 ,
+              0
+            ] ,
+            [
+              1 ,
+              1 ,
+              0 ,
+              0 ,
+              0 ,
+              0
+            ] ,
+            [
+              1 ,
+              1 ,
+              0 ,
+              0 ,
+              0 ,
+              0
+            ]
+          ] ,
+          "stationTimes" : {
+            "Azamgarh" : "2023-12-08T18:30:00Z" ,
+            "Shahganj" : "2023-12-08T21:50:00Z" ,
+            "Lucknow" : "2023-12-08T23:50:00Z" ,
+            "Delhi" : "2023-12-09T07:50:00Z"
+          } ,
+          "stations" : {
+            "Azamgarh" : 0 ,
+            "Phoolpur" : 1 ,
+            "Shahganj" : 2 ,
+            "Akbarpur" : 3 ,
+            "Ayodhya" : 4 ,
+            "Barabanki" : 5 ,
+            "Lucknow" : 6 ,
+            "Kanpur" : 7 ,
+            "Delhi" : 8
+          }
+        } ,
+        "seat" : "04"
+      }
+    ] ,
+    "userId" : "SAIF43"
+  } ,
+  {
+    "name" : "Ashar Ansari" ,
+    "password" : "12345Ashar" ,
+    "email" : "ashar@gmail.com" ,
+    "hashedPassword" : "$2a$10$KKiwyA9FxWgQuHUztBVNCOw0YYp0VMyTlQa9204ocISo/yZBms2EC" ,
+    "ticketsBooked" : [
+      {
+        "ticketId" : "4d25ca90-b" ,
+        "userId" : "ASHAR262" ,
+        "source" : "Azamgarh" ,
+        "destination" : "Lucknow" ,
+        "dateOfTravel" : "2025-11-22" ,
+        "train" : {
+          "trainId" : "AZM-32DEL" ,
+          "trainNo" : "54114" ,
+          "seats" : [
+            [
+              1 ,
+              1 ,
+              1 ,
+              1 ,
+              1 ,
+              0
+            ] ,
+            [
+              1 ,
+              1 ,
+              0 ,
+              0 ,
+              0 ,
+              0
+            ] ,
+            [
+              1 ,
+              1 ,
+              0 ,
+              0 ,
+              0 ,
+              0
+            ] ,
+            [
+              1 ,
+              1 ,
+              0 ,
+              0 ,
+              0 ,
+              0
+            ]
+          ] ,
+          "stationTimes" : {
+            "Azamgarh" : "2023-12-08T18:30:00Z" ,
+            "Shahganj" : "2023-12-08T21:50:00Z" ,
+            "Lucknow" : "2023-12-08T23:50:00Z" ,
+            "Delhi" : "2023-12-09T07:50:00Z"
+          } ,
+          "stations" : {
+            "Azamgarh" : 0 ,
+            "Phoolpur" : 1 ,
+            "Shahganj" : 2 ,
+            "Akbarpur" : 3 ,
+            "Ayodhya" : 4 ,
+            "Barabanki" : 5 ,
+            "Lucknow" : 6 ,
+            "Kanpur" : 7 ,
+            "Delhi" : 8
+          }
+        } ,
+        "seat" : "04"
+      } ,
+      {
+        "ticketId" : "a548adc6-f" ,
+        "userId" : "ASHAR262" ,
+        "source" : "Lucknow" ,
+        "destination" : "Mumbai" ,
+        "dateOfTravel" : "2022-11-23" ,
+        "train" : {
+          "trainId" : "MUM-123GKP" ,
+          "trainNo" : "12356" ,
+          "seats" : [
+            [
+              1 ,
+              1 ,
+              1 ,
+              1 ,
+              0 ,
+              1
+            ] ,
+            [
+              0 ,
+              0 ,
+              1 ,
+              0 ,
+              0 ,
+              1
+            ] ,
+            [
+              1 ,
+              1 ,
+              0 ,
+              0 ,
+              1 ,
+              0
+            ] ,
+            [
+              0 ,
+              0 ,
+              0 ,
+              1 ,
+              0 ,
+              0
+            ]
+          ] ,
+          "stationTimes" : {
+            "Mumbai" : "2023-12-15T07:50:00Z" ,
+            "Surat" : "2023-12-15T10:00:00Z" ,
+            "Vadodara" : "2023-12-15T12:30:00Z" ,
+            "GKP" : "2023-12-16T06:00:00Z"
+          } ,
+          "stations" : {
+            "Lucknow" : 0 ,
+            "Prayagraj" : 1 ,
+            "Mumbai" : 2 ,
+            "Surat" : 3 ,
+            "Vadodara" : 4 ,
+            "Ahmedabad" : 5 ,
+            "Ratlam" : 6 ,
+            "Jhansi" : 7 ,
+            "GKP" : 8
+          }
+        } ,
+        "seat" : "02"
+      } ,
+      {
+        "ticketId" : "ef92d97a-2" ,
+        "userId" : "ASHAR262" ,
+        "source" : "New Delhi" ,
+        "destination" : "Kanpur" ,
+        "dateOfTravel" : "2025-11-20" ,
+        "train" : {
+          "trainId" : "NDLS-777PNBE" ,
+          "trainNo" : "12777" ,
+          "seats" : [
+            [
+              1 ,
+              1 ,
+              0 ,
+              0 ,
+              0 ,
+              1
+            ] ,
+            [
+              0 ,
+              0 ,
+              0 ,
+              0 ,
+              0 ,
+              0
+            ] ,
+            [
+              1 ,
+              0 ,
+              0 ,
+              0 ,
+              1 ,
+              0
+            ] ,
+            [
+              0 ,
+              0 ,
+              1 ,
+              0 ,
+              0 ,
+              0
+            ]
+          ] ,
+          "stationTimes" : {
+            "New Delhi" : "2023-12-20T05:30:00Z" ,
+            "Kanpur" : "2023-12-20T10:45:00Z" ,
+            "Varanasi" : "2023-12-20T15:20:00Z" ,
+            "Patna" : "2023-12-20T19:30:00Z"
+          } ,
+          "stations" : {
+            "Lucknow" : -1 ,
+            "New Delhi" : 0 ,
+            "Aligarh" : 1 ,
+            "Kanpur" : 2 ,
+            "Prayagraj" : 3 ,
+            "Varanasi" : 4 ,
+            "Ara" : 5 ,
+            "Patna" : 6
+          }
+        } ,
+        "seat" : "01"
+      }
+    ] ,
+    "userId" : "ASHAR262"
+  } ,
+  {
+    "name" : "Wajid Khan" ,
+    "password" : "12345Wajid" ,
+    "email" : "wajid@gmail.com" ,
+    "hashedPassword" : "$2a$10$WSa1UVxH7EDEVITFfVurie5IHAGBusOm8cgEAp37jI5/WneoqUynW" ,
+    "ticketsBooked" : [
+      {
+        "ticketId" : "f3df6889-5" ,
+        "userId" : "WAJID506" ,
+        "source" : "Azamgarh" ,
+        "destination" : "Lucknow" ,
+        "dateOfTravel" : "2025-11-22" ,
+        "train" : {
+          "trainId" : "AZM-32DEL" ,
+          "trainNo" : "54114" ,
+          "seats" : [
+            [
+              1 ,
+              1 ,
+              1 ,
+              1 ,
+              1 ,
+              0
+            ] ,
+            [
+              1 ,
+              1 ,
+              0 ,
+              0 ,
+              0 ,
+              0
+            ] ,
+            [
+              1 ,
+              1 ,
+              0 ,
+              0 ,
+              0 ,
+              0
+            ] ,
+            [
+              1 ,
+              1 ,
+              0 ,
+              0 ,
+              0 ,
+              0
+            ]
+          ] ,
+          "stationTimes" : {
+            "Azamgarh" : "2023-12-08T18:30:00Z" ,
+            "Shahganj" : "2023-12-08T21:50:00Z" ,
+            "Lucknow" : "2023-12-08T23:50:00Z" ,
+            "Delhi" : "2023-12-09T07:50:00Z"
+          } ,
+          "stations" : {
+            "Azamgarh" : 0 ,
+            "Phoolpur" : 1 ,
+            "Shahganj" : 2 ,
+            "Akbarpur" : 3 ,
+            "Ayodhya" : 4 ,
+            "Barabanki" : 5 ,
+            "Lucknow" : 6 ,
+            "Kanpur" : 7 ,
+            "Delhi" : 8
+          }
+        } ,
+        "seat" : "04"
+      }
+    ] ,
+    "userId" : "WAJID506"
+  } ,
+  {
+    "name" : "Adnan Akbar" ,
+    "password" : "12345Adnan" ,
+    "email" : "adnan@gmail.com" ,
+    "hashedPassword" : "$2a$10$BAHbJ9/cJxyB.6h8vaSiY.FtI3xmWERoTFfBt.6uhB7QdhgXxRouq" ,
+    "ticketsBooked" : [
+      {
+        "ticketId" : "52f03b51-2" ,
+        "userId" : "ADNAN464" ,
+        "source" : "Azamgarh" ,
+        "destination" : "Lucknow" ,
+        "dateOfTravel" : "2025-09-11" ,
+        "train" : {
+          "trainId" : "AZM-32DEL" ,
+          "trainNo" : "54114" ,
+          "seats" : [
+            [
+              1 ,
+              1 ,
+              0 ,
+              0 ,
+              0 ,
+              0
+            ] ,
+            [
+              0 ,
+              0 ,
+              0 ,
+              0 ,
+              0 ,
+              0
+            ] ,
+            [
+              0 ,
+              0 ,
+              0 ,
+              0 ,
+              0 ,
+              0
+            ] ,
+            [
+              0 ,
+              0 ,
+              0 ,
+              0 ,
+              0 ,
+              0
+            ]
+          ] ,
+          "stationTimes" : {
+            "Azamgarh" : "2023-12-08T18:30:00Z" ,
+            "Shahganj" : "2023-12-08T21:50:00Z" ,
+            "Lucknow" : "2023-12-08T23:50:00Z" ,
+            "Delhi" : "2023-12-09T07:50:00Z"
+          } ,
+          "stations" : {
+            "Azamgarh" : 0 ,
+            "Phoolpur" : 1 ,
+            "Shahganj" : 2 ,
+            "Akbarpur" : 3 ,
+            "Ayodhya" : 4 ,
+            "Barabanki" : 5 ,
+            "Lucknow" : 6 ,
+            "Kanpur" : 7 ,
+            "Delhi" : 8
+          }
+        } ,
+        "seat" : "01"
+      }
+    ] ,
+    "userId" : "ADNAN464"
+  }
+]
