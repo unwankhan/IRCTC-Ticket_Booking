@@ -1,9 +1,8 @@
 package org.example.entities;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonFormat;
 
-import java.time.DayOfWeek;
-import java.util.Date;
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Map;
 
@@ -11,23 +10,44 @@ public class Train {
 
     private String trainId;
     private String trainNo;
+    private String trainName;
     private List<List<Integer>> seats;
-    private Map<String, String> stationTimes;
-    //private Map<String, String> stationTimes;
-    DayOfWeek dayOfWeek;
-    Date startDate;
+    private int availSeat;
+    @JsonFormat(pattern="yyyy-MM-dd'T'HH:mm:ss")
+    private Map<String, LocalDateTime> stationTimes;
     private Map<String, Integer> stations;
 
 
-    public Train(String trainId, String trainNo, List<List<Integer>> seats, Map<String, String> stationTimes,  Map<String, Integer> stations) {
+
+    public Train(String trainId, String trainNo, List<List<Integer>> seats, Map<String, LocalDateTime> stationTimes,  Map<String, Integer> stations,int availSeat,String trainName) {
         this.trainId = trainId;
         this.trainNo = trainNo;
         this.seats = seats;
         this.stationTimes = stationTimes;
         this.stations = stations;
+        this.availSeat = availSeat;
+        this.trainName = trainName;
     }
 
     public Train() {}
+
+
+    public void setTrainName(String trainName) {
+        this.trainName = trainName;
+    }
+
+    public String getTrainName() {
+        return this.trainName;
+    }
+
+
+
+    public void setAvailSeat(int availSeat) {
+        this.availSeat = availSeat;
+    }
+    public int getAvailSeat() {
+        return this.availSeat;
+    }
 
     public void setTrainId(String trainId) {
         this.trainId = trainId;
@@ -37,11 +57,7 @@ public class Train {
         this.trainNo = trainNo;
     }
 
-    public void bookSeats(List<List<Integer>> seats) {
-        this.seats = seats;
-    }
-
-    public void setStationTimes(Map<String, String> stationTimes) {
+    public void setStationTimes(Map<String, LocalDateTime> stationTimes) {
         this.stationTimes = stationTimes;
     }
 
@@ -62,7 +78,11 @@ public class Train {
         return this.seats;
     }
 
-    public Map<String, String> getStationTimes() {
+    public void setSeats(List<List<Integer>> seats) {
+        this.seats = seats;
+    }
+
+    public Map<String, LocalDateTime> getStationTimes() {
         return this.stationTimes;
     }
 

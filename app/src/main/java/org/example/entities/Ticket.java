@@ -89,13 +89,15 @@ public class Ticket {
         System.out.println("\n\n");
         System.out.println("Ticket Details");
         System.out.println("Ticket Id: "+this.ticketId);
-        System.out.println("Train: "+this.train.getTrainNo());
-        System.out.println(this.train.getTrainId());
+        System.out.println("Train No.: "+this.train.getTrainNo());
+        System.out.println("Ticket Id: "+this.train.getTrainId());
+        System.out.println("Train Name: "+this.train.getTrainName());
         System.out.println("User Id: "+this.userId);
         System.out.println("Source: "+this.source);
         System.out.println("Destination: "+this.destination);
         System.out.println("Date: "+this.dateOfTravel);
-        System.out.println("Seat: "+this.seat);
+        if (this.status)
+        System.out.println("Seat: A"+this.seat);
         System.out.println("Status: "+(this.status?"Confirmed":"Waiting"));
         System.out.println("\n\n");
     }

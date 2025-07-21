@@ -12,3 +12,13 @@ public class AppTest {
         assertNotNull("app should have a greeting", classUnderTest.getGreeting());
     }
 }
+
+
+
+
+//        JsonNode root = mapper.readTree(new File(TRAIN_PATH));
+//        ArrayNode arr = (ArrayNode) root.get("seats");
+//        ObjectNode first = (ObjectNode) arr.get(0);
+//        first.put("name", "Naya Name");
+
+

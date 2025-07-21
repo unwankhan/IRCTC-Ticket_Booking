@@ -297,6 +297,9 @@ import org.example.services.UserBookingService;
 
 import java.io.IOException;
 import java.security.SecureRandom;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -334,7 +337,7 @@ public class App {
             try {
                 option = Integer.parseInt(input);
             } catch (NumberFormatException nfe) {
-                System.out.println("Invalid choice, please enter a number 1–7.");
+                System.out.println("Invalid choice, please enter a valid number.");
                 continue;
             }
             if (userService.getUser()!=null) {
@@ -451,38 +454,33 @@ public class App {
         return userService;
     }
 
+
+
+
     private static void handleSearchTrains(Scanner sc, UserBookingService userService) throws IOException {
         boolean tryAgain = true;
-
         while (tryAgain) {
             System.out.print("Please enter your source station: ");
             String source = sc.nextLine();
             System.out.print("Please enter your destination station: ");
             String destination = sc.nextLine();
-
-            List<Train> trains = userService.searchAllTrains(source, destination);
-            if (trains == null || trains.isEmpty()) {
-                System.out.println("No trains found. Try different source/destination.");
-            } else {
-                System.out.println("\nHere is the list of trains:");
-                for (Train t : trains) {
-                    System.out.println("Train ID: " + t.getTrainId());
-                    System.out.println("Train No: " + t.getTrainNo());
-                    System.out.println("Route:");
-                    int start = t.getStations().get(source);
-                    int end = t.getStations().get(destination);
-                    t.getStations().entrySet().stream()
-                            .filter(e -> e.getValue() >= start && e.getValue() <= end)
-                            .forEach(e -> System.out.println("  - " + e.getKey()));
-                }
-            }
-
+            System.out.print("Date of travel (YYYY-MM-DD): ");
+            String date = sc.nextLine();
+            DateTimeFormatter df = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+            List<Train>  trains = userService.searchAllTrains(source, destination, LocalDate.parse(date,df).atStartOfDay());
+            userService.handleTrainList(trains,source,destination);
             System.out.print("Search again? (yes/no): ");
             String again = sc.nextLine().trim();
             tryAgain = again.equalsIgnoreCase("yes");
             System.out.println();
         }
+        return;
     }
+
+
+
+
+
 
     private static UserBookingService handleBooking(Scanner sc, UserBookingService userService)
             throws IOException {
@@ -493,17 +491,36 @@ public class App {
 
         boolean tryBooking = true;
         while (tryBooking && userService.getUser() != null) {
-            System.out.print("Source station: ");
+            System.out.print("Please enter your source station: ");
             String source = sc.nextLine();
-            System.out.print("Destination station: ");
+            System.out.print("Please enter your destination station: ");
             String destination = sc.nextLine();
             System.out.print("Date of travel (YYYY-MM-DD): ");
             String date = sc.nextLine();
+            DateTimeFormatter df = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+            List<Train> trains=null;
+            try {
+                trains = userService.searchAllTrains(source, destination, LocalDate.parse(date, df).atStartOfDay());
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            userService.handleTrainList(trains, source, destination);
+            if (trains != null) {
 
-            Train train = userService.searchTrain(source, destination);
-            if (train == null) {
-                System.out.println("No train found. Try again.");
-            } else {
+                int selectedTrain = 0;
+                do {
+                    System.out.print("Please select the serial number from the train list provided above and enter it here.\n ");
+                    try {
+                        String serId = sc.nextLine().trim();
+                        selectedTrain = Integer.parseInt(serId);
+                    } catch (NumberFormatException nfe) {
+                        System.out.println("Invalid choice, please enter a valid number");
+                        continue;
+                    }
+                    System.out.print((selectedTrain >= 1 && selectedTrain <= trains.size()) + "   " + trains.size() + " " + selectedTrain + "\n\n");
+                } while (!(selectedTrain >= 1 && selectedTrain <= trains.size()));
+
+                Train train = trains.get(selectedTrain - 1);
                 try {
                     Ticket ticket = userService.bookTicket(train, source, destination, date);
                     System.out.println("Ticket booked! PNR: " + ticket.getTicketId());
@@ -511,14 +528,18 @@ public class App {
                     if (sc.nextLine().trim().equalsIgnoreCase("yes")) {
                         ticket.printTicketDetails();
                     }
+                    System.out.print("Book another ticket? (yes/no): ");
+                    tryBooking = sc.nextLine().trim().equalsIgnoreCase("yes");
+                    System.out.println();
                 } catch (Exception e) {
                     System.out.println("Booking failed: " + e.getMessage());
                 }
+            } else {
+                System.out.print("Do you want to try again? (yes/no): ");
+                tryBooking = sc.nextLine().trim().equalsIgnoreCase("yes");
+                System.out.println();
             }
 
-            System.out.print("Book another ticket? (yes/no): ");
-            tryBooking = sc.nextLine().trim().equalsIgnoreCase("yes");
-            System.out.println();
         }
 
         return userService;

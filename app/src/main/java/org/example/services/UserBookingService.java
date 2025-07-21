@@ -1,4 +1,6 @@
 package org.example.services;
+import com.fasterxml.jackson.databind.SerializationFeature;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import org.example.entities.Ticket;
 import org.example.entities.Train;
 import org.example.util.UserServiceUtil;
@@ -7,14 +9,13 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.example.entities.User;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
-import java.util.ArrayList;
+import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
@@ -25,12 +26,13 @@ public class UserBookingService {
     private User user1;
     private static final Path USER_PATH = Paths.get("data", "users.json");
     // "src/main/resources/localDb/users.json";
-    private ObjectMapper mapper = new ObjectMapper();
+    private ObjectMapper mapper ;
     private static List<User> userList;
 
     public User getUser() {
         return user1;
     }
+    TrainService trainService;
 
     public void setUser(User user) {
         this.user1 = user;
@@ -41,8 +43,20 @@ public class UserBookingService {
     }
 
     public UserBookingService() throws IOException {
-        this.user1=null;
-        userList=loadUser();
+        // 1) ObjectMapper banao
+        this.mapper = new ObjectMapper();
+        // 2) JavaTimeModule register karo
+        mapper.registerModule(new JavaTimeModule());
+        // 3) (optional) dates timestamps mein na likho
+        mapper.disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS);
+        trainService=new TrainService();
+        try{
+            userList=loadUser();
+        }
+       catch(Exception e){
+            userList=new LinkedList<>();
+            e.printStackTrace();
+       }
     }
 
     private List<User> loadUser() throws IOException {
@@ -106,9 +120,22 @@ public class UserBookingService {
         }
     }
 
+
+
+
+
+
+
     public void showBookingDetails(Ticket ticket){
         ticket.printTicketDetails();
     }
+
+
+
+
+
+
+
 
     public Object[] getTicketDetails(Ticket ticket){
         return ticket.getTicketInfo();
@@ -116,19 +143,33 @@ public class UserBookingService {
 
 
 
+
+
+
+
+
     public Train searchTrain(String source,String destination) throws IOException {
-        TrainService trainService=new TrainService();
         return trainService.searchTrain(source,destination);
     }
 
 
-   public List<Train> searchAllTrains(String source,String destination) throws IOException {
-        TrainService trainService=new TrainService();
-        return trainService.searchAllTrains(source,destination);
+
+
+
+
+
+
+   public List<Train> searchAllTrains(String source, String destination, LocalDateTime date) throws IOException {
+        return trainService.searchAllTrains(source,destination,date);
     }
 
+
+
+
+
+
+
     public Ticket bookTicket(Train train,String source,String destination,String dateOfTravel) throws Exception {
-        TrainService trainService=new TrainService();
         try {
             Ticket currBookedTicket = trainService.bookTicket(train, source, destination, dateOfTravel, user1.getUserId());
             if (currBookedTicket != null) {
@@ -144,17 +185,31 @@ public class UserBookingService {
 
 
     public void cancelTicket(Ticket ticket) throws IOException {
-        TrainService trainService=new TrainService();
         trainService.cancelTicket(ticket);
         user1.getTicketsBooked().remove(ticket);
         saveUserInFile();
         }
 
 
+
+
+
+
     public Ticket fetchTicket(String PNR) throws IOException {
         return user1.getTicketsBooked().stream().filter(currTicket->  {
             return currTicket.getTicketId().equals(PNR);
         }).findFirst().orElse(null);
+    }
+
+
+
+
+
+
+    public void  handleTrainList(List<Train> trains,String source,String destination) throws IOException {
+        TrainService trainService=new TrainService();
+        trainService.handleTrainList(trains,source,destination);
+        return;
     }
 
 }
