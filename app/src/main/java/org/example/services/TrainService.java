@@ -80,7 +80,7 @@ public class TrainService {
     }
 
     public Ticket bookTicket(Train train2,String source,String destination,String dateOfTravel,String userId) throws Exception {
-            StringBuilder ocuupiedSeat= new StringBuilder();
+            StringBuilder occupiedSeat= new StringBuilder();
             Train train=trainList.stream().filter(train3-> { return train3.getTrainId().equals(train2.getTrainId()); }).findFirst().orElse(null);
             boolean isConfirmed;
             if (train.getAvailSeat()>0){
@@ -93,7 +93,7 @@ public class TrainService {
                         System.out.println("unwan upar j "+j+" ");
                         if (seatStruct.get(i).get(j).equals(0)) {
                             seatStruct.get(i).set(j, 1);
-                            ocuupiedSeat.append(i).append(j);
+                            occupiedSeat.append(i).append(j);
                            break outer;
                         }
                         System.out.println("unwan "+i+" "+j+" "+seatStruct.get(i).size());
@@ -110,7 +110,7 @@ public class TrainService {
         System.out.println("train SAVEFILD");
             saveTrainInfile();
 
-            return new Ticket(UUID.randomUUID().toString(), userId,source,destination, dateOfTravel,train, ocuupiedSeat.toString(),isConfirmed);
+            return new Ticket(UUID.randomUUID().toString(), userId,source,destination, dateOfTravel,train, occupiedSeat.toString(),isConfirmed);
 
     }
 

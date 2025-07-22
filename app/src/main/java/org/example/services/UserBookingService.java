@@ -207,7 +207,6 @@ public class UserBookingService {
 
 
     public void  handleTrainList(List<Train> trains,String source,String destination) throws IOException {
-        TrainService trainService=new TrainService();
         trainService.handleTrainList(trains,source,destination);
         return;
     }
