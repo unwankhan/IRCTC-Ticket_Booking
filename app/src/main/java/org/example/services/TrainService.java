@@ -84,22 +84,16 @@ public class TrainService {
             Train train=trainList.stream().filter(train3-> { return train3.getTrainId().equals(train2.getTrainId()); }).findFirst().orElse(null);
             boolean isConfirmed;
             if (train.getAvailSeat()>0){
-                System.out.println("train bookticket seat enough");
                 List<List<Integer>> seatStruct=train.getSeats();
                 outer:
                 for (int i=0;i<seatStruct.size();i++) {
-                    System.out.println("unwan upar i "+i+" ");
                     for (int j=0;j<seatStruct.get(i).size();j++) {
-                        System.out.println("unwan upar j "+j+" ");
                         if (seatStruct.get(i).get(j).equals(0)) {
                             seatStruct.get(i).set(j, 1);
                             occupiedSeat.append(i).append(j);
                            break outer;
                         }
-                        System.out.println("unwan "+i+" "+j+" "+seatStruct.get(i).size());
                     }
-                    System.out.println("unwan bahar "+i+" ");
-                    System.out.println("unwan "+i+"  "+seatStruct.size());
                 }
                 train.setAvailSeat(train.getAvailSeat()-1);
                 isConfirmed=true;
@@ -107,7 +101,6 @@ public class TrainService {
             else{
                 throw new Exception("seats not available");
             }
-        System.out.println("train SAVEFILD");
             saveTrainInfile();
 
             return new Ticket(UUID.randomUUID().toString(), userId,source,destination, dateOfTravel,train, occupiedSeat.toString(),isConfirmed);
@@ -176,4 +169,13 @@ public class TrainService {
             }
         }
     }
+
+
+
+
+
+
+
+
+
 }
